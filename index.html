@@ -8,30 +8,32 @@
 </head>
 
 <body>
-  <div class="logo">
-    <img src="./img/bikcraft.svg" alt="Bikcraft">
-  </div>
+  <header>
 
-  <div class="navegacao">
-    <a href="">Sobre</a>
-    <a href="">Produtos</a>
-    <a href="">Lojas</a>
-    <a href="">Contato</a>
-  </div>
+    <img class="logo" src="./img/bikcraft.svg" alt="Bikcraft">
+    <nav aria-label="primaria">
+      <ul class="navegacao" ar>
+        <li><a href="">Sobre</a></li>
+        <li><a href="">Produtos</a></li>
+        <li><a href="">Lojas</a></li>
+        <li><a href="">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="conteudo">
-    <div class="texto">
+  <main class="conteudo">
+    <article class="texto">
       <span class="detalhe"></span>
       <h1>Bicicletas Feitas a Mão</h1>
       <p>A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios da marca.</p>
       <a class="botao" href="./">Ver Mais</a>
-    </div>
+    </article>
 
     <img src="./img/bicicleta.jpg" alt="Bicicleta preta">
 
-    <h1 class="vantagens">Vantagens Bikcraft</h1>
+    <h1 id="vantag" class="vantagens">Vantagens Bikcraft</h1>
 
-    <div class="beneficios">
+    <section class="beneficios" aria-labelledby="vantag">
       <div class="beneficios-item">
         <img src="./img/eletrica.svg" alt="">
         <h3>Motor Elétrico</h3>
@@ -49,10 +51,10 @@
         <h3>Rastreador</h3>
         <p>Rastreador e sistema anti-furto para garantir o seu sossego.</p>
       </div>
-    </div>
+    </section>
 
-  </div>
-  <p class="rodape">Bikraft. Alguns Direitos Reservados.</p>
+  </main>
+  <footer class="rodape">Bikraft. Alguns Direitos Reservados.</footer>
 </body>
 
 </html>
