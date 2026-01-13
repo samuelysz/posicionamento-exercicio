@@ -32,11 +32,14 @@ p {
 
 ul {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
-.logo {
-  margin: auto;
-  margin-bottom: 2.8rem;
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
 }
 
 .navegacao {
@@ -47,16 +50,18 @@ ul {
 }
 
 .navegacao a {
+  display: block;
   color: #000;
   text-transform: uppercase;
   background-color: #fff;
   padding: 16px 28.4px;
   border-radius: 0.25rem;
+  border: 2px solid transparent;
+  transition: 0.2s;
 }
 
 .navegacao a:hover {
   border: 2px solid #ee2211;
-  padding: 14px 26.4px;
 }
 
 .conteudo {
@@ -74,13 +79,23 @@ ul {
   align-content: center;
   gap: 1.25rem;
   justify-items: end;
+  grid-column: 1;
 }
 
-.detalhe {
+.texto h1 {
+  font-size: 2rem;
+}
+
+.bicicleta {
+  grid-column: 2;
+}
+
+.texto::before {
+  content: "";
+  position: absolute;
   width: 3.75rem;
   height: 0.25rem;
   background: #ee2211;
-  position: absolute;
   top: 1.9rem;
   right: -1.9rem;
 }
@@ -88,9 +103,10 @@ ul {
 .botao {
   background-color: #ee2211;
   color: #fff;
-  padding: 1rem 1.9rem;
+  padding: 1rem 2rem;
   text-transform: uppercase;
   border-radius: 0.25rem;
+  transition: 0.2s;
 }
 
 .botao:hover {
@@ -98,8 +114,12 @@ ul {
 }
 
 .beneficios {
-  padding: 2.5rem;
   background-color: #fff;
+  padding: 2.5rem;
+}
+
+.beneficios-item:nth-child(odd) {
+  background-color: #f7f7f7;
 }
 
 .beneficios-item {
@@ -107,6 +127,11 @@ ul {
   grid-template-columns: auto 1fr;
   gap: 0.62rem 1.25rem;
   padding: 1.25rem;
+  border-left: 4px solid transparent;
+}
+
+.beneficios-item:hover {
+  border-left: 4px solid #ee2211;
 }
 
 .beneficios-item p {
@@ -114,7 +139,9 @@ ul {
 }
 
 .vantagens {
-  color: #c6c6c6;
+  background-color: #f7f7f7;
+  color: rgb(0, 0, 0, 0.2);
+  background-image: url("./img/onda.svg");
   font-size: 4rem;
   padding: 2.5rem;
   text-transform: uppercase;
